@@ -1,0 +1,134 @@
+{
+  "info_sistema": {
+    "cidade": "Anápolis",
+    "uf": "GO",
+    "versao_dados": "2.1.0",
+    "ultima_atualizacao": "2025-09-26T11:21:00-03:00",
+    "contato_operadora": {
+      "empresa": "Viação Anapolina (URBAN)",
+      "telefone": "0800-123-4567",
+      "site": "www.urban.com.br"
+    },
+    "tipos_de_tarifa": [
+      {
+        "tipo": "Cartão Rápido",
+        "valor": 5.50
+      },
+      {
+        "tipo": "Dinheiro",
+        "valor": 5.50
+      },
+      {
+        "tipo": "Estudante",
+        "valor": 2.75
+      }
+    ]
+  },
+  "linhas": [
+    {
+      "id_linha": "L021",
+      "numero": "021",
+      "nome": "JAIARA / VIA BRASIL",
+      "descricao": "Linha radial que conecta o Terminal Central ao bairro da Jaiara, passando pelo Brasil Park Shopping.",
+      "tipo_servico": "Urbano - Radial",
+      "status": "Ativa",
+      "terminal_principal": 101,
+      "duracao_media_minutos": 45,
+      "alerta_servico": null,
+      "horarios": {
+        "ida": { "ponto_partida": "Terminal Central", "dias_uteis": ["05:30", "06:00", "06:20"], "sabados": ["06:00", "07:00"], "domingos_feriados": ["07:00", "09:00"] },
+        "volta": { "ponto_partida": "Ponto Final Jaiara", "dias_uteis": ["05:55", "06:25", "06:45"], "sabados": ["06:30", "07:30"], "domingos_feriados": ["07:30", "09:30"] }
+      },
+      "sequencia_paradas_ida": [101, 102, 103, 104, 105],
+      "sequencia_paradas_volta": [105, 106, 107, 102, 101],
+      "pontos_de_interesse_na_rota": ["POI01", "POI03"]
+    },
+    {
+      "id_linha": "L096",
+      "numero": "096",
+      "nome": "CIRCULAR / VIA IPIRANGA",
+      "descricao": "Linha circular que atende hospitais e o Parque Ipiranga.",
+      "tipo_servico": "Urbano - Circular",
+      "status": "Ativa",
+      "terminal_principal": 101,
+      "duracao_media_minutos": 60,
+      "alerta_servico": "Desvio na Av. Santos Dumont devido a obras. Parada 112 temporariamente desativada.",
+      "horarios": {
+        "ida": { "ponto_partida": "Terminal Central", "dias_uteis": ["06:00", "06:30", "07:00"], "sabados": ["06:30", "07:30"], "domingos_feriados": ["08:00", "10:00"] },
+        "volta": null
+      },
+      "sequencia_paradas_ida": [101, 108, 111, 112, 101],
+      "sequencia_paradas_volta": null,
+      "pontos_de_interesse_na_rota": ["POI02", "POI04"]
+    },
+    {
+      "id_linha": "L011",
+      "numero": "011",
+      "nome": "RECANTO DO SOL / VIA JUNDIAÍ",
+      "descricao": "Atende a região sul, passando pelo bairro Jundiaí e o Mercado Municipal.",
+      "tipo_servico": "Urbano - Diametral",
+      "status": "Ativa",
+      "terminal_principal": 101,
+      "duracao_media_minutos": 55,
+      "alerta_servico": null,
+      "horarios": {
+        "ida": { "ponto_partida": "Terminal Central", "dias_uteis": ["05:50", "06:20", "06:50"], "sabados": ["06:10", "07:10"], "domingos_feriados": ["07:20", "09:20"] },
+        "volta": { "ponto_partida": "Ponto Final Recanto do Sol", "dias_uteis": ["06:15", "06:45", "07:15"], "sabados": ["06:40", "07:40"], "domingos_feriados": ["07:50", "09:50"] }
+      },
+      "sequencia_paradas_ida": [101, 108, 109, 113, 114],
+      "sequencia_paradas_volta": [114, 113, 110, 108, 101],
+      "pontos_de_interesse_na_rota": ["POI05"]
+    },
+    {
+      "id_linha": "L064",
+      "numero": "064",
+      "nome": "CALIXTO ABRÃO / VIA GOIANÁPOLIS",
+      "descricao": "Linha que atende a região leste da cidade.",
+      "tipo_servico": "Urbano - Radial",
+      "status": "Ativa",
+      "terminal_principal": 101,
+      "duracao_media_minutos": 35,
+      "alerta_servico": null,
+      "horarios": {
+        "ida": { "ponto_partida": "Terminal Central", "dias_uteis": ["06:05", "06:45", "07:25"], "sabados": ["06:50", "07:50"], "domingos_feriados": ["08:30", "10:30"] },
+        "volta": { "ponto_partida": "Ponto Final Calixto Abrão", "dias_uteis": ["06:25", "07:05", "07:45"], "sabados": ["07:10", "08:10"], "domingos_feriados": ["08:50", "10:50"] }
+      },
+      "sequencia_paradas_ida": [101, 102, 115, 116],
+      "sequencia_paradas_volta": [116, 115, 107, 101],
+      "pontos_de_interesse_na_rota": []
+    }
+  ],
+  "paradas": [
+    { "id_parada": 101, "codigo_parada": "T01", "nome": "Terminal Urbano Central", "endereco": "Praça Americano do Brasil, s/n - Centro", "coordenadas": {"lat": -16.328, "lng": -48.953}, "acessibilidade": true, "features": ["abrigo coberto", "banco", "painel eletrônico", "ponto de recarga"], "linhas_que_atendem": ["L021", "L096", "L011", "L064"] },
+    { "id_parada": 102, "codigo_parada": "1533", "nome": "Brasil Park Shopping", "endereco": "Av. Brasil, 505 - Centro", "coordenadas": {"lat": -16.325, "lng": -48.958}, "acessibilidade": true, "features": ["abrigo coberto"], "linhas_que_atendem": ["L021", "L064"] },
+    { "id_parada": 103, "codigo_parada": "1801", "nome": "Praça da Jaiara", "endereco": "Av. Presidente Kennedy - Jaiara", "coordenadas": {"lat": -16.295, "lng": -48.961}, "acessibilidade": false, "features": ["banco"], "linhas_que_atendem": ["L021"] },
+    { "id_parada": 104, "codigo_parada": "1802", "nome": "Colégio Gomes de Souza Ramos", "endereco": "Av. Presidente Kennedy - Jaiara", "coordenadas": {"lat": -16.291, "lng": -48.963}, "acessibilidade": true, "features": ["abrigo coberto", "banco"], "linhas_que_atendem": ["L021"] },
+    { "id_parada": 105, "codigo_parada": "1899", "nome": "Ponto Final Jaiara", "endereco": "Rua das Gardênias - Jaiara", "coordenadas": {"lat": -16.288, "lng": -48.965}, "acessibilidade": false, "features": [], "linhas_que_atendem": ["L021"] },
+    { "id_parada": 106, "codigo_parada": "1850", "nome": "Supermercado Rio Vermelho", "endereco": "Av. Fernando Costa - Jaiara", "coordenadas": {"lat": -16.292, "lng": -48.959}, "acessibilidade": true, "features": ["abrigo coberto"], "linhas_que_atendem": ["L021"] },
+    { "id_parada": 107, "codigo_parada": "1530", "nome": "Praça do Ancião", "endereco": "Av. Getúlio Vargas - Centro", "coordenadas": {"lat": -16.326, "lng": -48.951}, "acessibilidade": true, "features": ["abrigo coberto", "banco"], "linhas_que_atendem": ["L021", "L064"] },
+    { "id_parada": 108, "codigo_parada": "2100", "nome": "UniEVANGÉLICA", "endereco": "Av. Universitária, km 3.5 - Cidade Universitária", "coordenadas": {"lat": -16.315, "lng": -48.938}, "acessibilidade": true, "features": ["abrigo coberto", "banco"], "linhas_que_atendem": ["L096", "L011"] },
+    { "id_parada": 109, "codigo_parada": "2105", "nome": "Avenida Pinheiro Chagas", "endereco": "Av. Pinheiro Chagas - Jundiaí", "coordenadas": {"lat": -16.319, "lng": -48.945}, "acessibilidade": true, "features": ["abrigo coberto"], "linhas_que_atendem": ["L011"] },
+    { "id_parada": 110, "codigo_parada": "2108", "nome": "SESC Jundiaí", "endereco": "Av. Santos Dumont - Jundiaí", "coordenadas": {"lat": -16.322, "lng": -48.948}, "acessibilidade": true, "features": ["abrigo coberto", "banco"], "linhas_que_atendem": ["L011"] },
+    { "id_parada": 111, "codigo_parada": "2045", "nome": "Parque Ipiranga", "endereco": "Av. Ipiranga - Jundiaí", "coordenadas": {"lat": -16.318, "lng": -48.950}, "acessibilidade": true, "features": ["abrigo coberto", "banco"], "linhas_que_atendem": ["L096"] },
+    { "id_parada": 112, "codigo_parada": "2048", "nome": "Hospital de Urgências (HUANA)", "endereco": "Av. Santos Dumont - Jundiaí", "coordenadas": {"lat": -16.320, "lng": -48.952}, "acessibilidade": true, "features": ["abrigo coberto", "banco"], "linhas_que_atendem": ["L096"] },
+    { "id_parada": 113, "codigo_parada": "3501", "nome": "Mercado Municipal", "endereco": "Rua General Joaquim Inácio - Centro", "coordenadas": {"lat": -16.331, "lng": -48.955}, "acessibilidade": false, "features": [], "linhas_que_atendem": ["L011"] },
+    { "id_parada": 114, "codigo_parada": "3599", "nome": "Ponto Final Recanto do Sol", "endereco": "Av. Central - Recanto do Sol", "coordenadas": {"lat": -16.355, "lng": -48.960}, "acessibilidade": false, "features": [], "linhas_que_atendem": ["L011"] },
+    { "id_parada": 115, "codigo_parada": "4101", "nome": "Praça Dom Emanuel", "endereco": "Av. Barão do Rio Branco - Centro", "coordenadas": {"lat": -16.330, "lng": -48.950}, "acessibilidade": true, "features": ["banco"], "linhas_que_atendem": ["L064"] },
+    { "id_parada": 116, "codigo_parada": "4199", "nome": "Ponto Final Calixto Abrão", "endereco": "Rua 25 - Calixto Abrão", "coordenadas": {"lat": -16.335, "lng": -48.930}, "acessibilidade": false, "features": [], "linhas_que_atendem": ["L064"] }
+  ],
+  "pontos_de_interesse": [
+    { "id_poi": "POI01", "nome": "Brasil Park Shopping", "categoria": "Shopping", "coordenadas": {"lat": -16.325, "lng": -48.958} },
+    { "id_poi": "POI02", "nome": "Parque Ipiranga", "categoria": "Parque", "coordenadas": {"lat": -16.318, "lng": -48.950} },
+    { "id_poi": "POI03", "nome": "Santa Casa de Anápolis", "categoria": "Hospital", "coordenadas": {"lat": -16.329, "lng": -48.959} },
+    { "id_poi": "POI04", "nome": "Hospital de Urgências (HUANA)", "categoria": "Hospital", "coordenadas": {"lat": -16.320, "lng": -48.952} },
+    { "id_poi": "POI05", "nome": "Mercado Municipal de Anápolis", "categoria": "Comércio", "coordenadas": {"lat": -16.331, "lng": -48.955} },
+    { "id_poi": "POI06", "nome": "Prefeitura de Anápolis", "categoria": "Serviço Público", "coordenadas": {"lat": -16.327, "lng": -48.955} }
+  ],
+  "onibus_em_tempo_real": [
+    { "id_onibus": "V2150", "placa": "XYZ-1234", "id_linha_atual": "L021", "sentido": "volta", "localizacao_atual": { "lat": -16.290, "lng": -48.964, "timestamp_gps": "2025-09-26T11:20:15-03:00" }, "velocidade_kmh": 28, "lotacao_estimada": "media", "proxima_parada_estimada": 104, "acessibilidade": true, "ultimo_contato": "2025-09-26T11:20:20-03:00" },
+    { "id_onibus": "V3010", "placa": "DEF-9012", "id_linha_atual": "L096", "sentido": "ida", "localizacao_atual": { "lat": -16.319, "lng": -48.951, "timestamp_gps": "2025-09-26T11:21:05-03:00" }, "velocidade_kmh": 0, "lotacao_estimada": "baixa", "proxima_parada_estimada": 111, "acessibilidade": true, "ultimo_contato": "2025-09-26T11:21:10-03:00" },
+    { "id_onibus": "V2155", "placa": "ABC-5678", "id_linha_atual": "L021", "sentido": "ida", "localizacao_atual": { "lat": -16.326, "lng": -48.955, "timestamp_gps": "2025-09-26T11:19:55-03:00" }, "velocidade_kmh": 15, "lotacao_estimada": "alta", "proxima_parada_estimada": 102, "acessibilidade": true, "ultimo_contato": "2025-09-26T11:20:00-03:00" },
+    { "id_onibus": "V4001", "placa": "GHI-3456", "id_linha_atual": "L011", "sentido": "ida", "localizacao_atual": { "lat": -16.321, "lng": -48.946, "timestamp_gps": "2025-09-26T11:20:40-03:00" }, "velocidade_kmh": 42, "lotacao_estimada": "baixa", "proxima_parada_estimada": 110, "acessibilidade": true, "ultimo_contato": "2025-09-26T11:20:45-03:00" },
+    { "id_onibus": "V4008", "placa": "JKL-7890", "id_linha_atual": "L064", "sentido": "volta", "localizacao_atual": { "lat": -16.329, "lng": -48.945, "timestamp_gps": "2025-09-26T11:21:12-03:00" }, "velocidade_kmh": 33, "lotacao_estimada": "media", "proxima_parada_estimada": 115, "acessibilidade": false, "ultimo_contato": "2025-09-26T11:21:18-03:00" }
+  ]
+}
