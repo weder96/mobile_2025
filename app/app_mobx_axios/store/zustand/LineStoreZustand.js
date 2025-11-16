@@ -8,7 +8,7 @@ import { create } from 'zustand';
 const useCounterStore = create((set) => ({
   
   count: 0,
-  lines: [{"id":1, "nome": "JAIARA VIA BRASIL"},{"id":2, "nome": "JAIARA VIA TIRADENTES"}],
+  lines: [],
   baseApiLines: "linhas",
 
   // 2. Ações (Actions) - Funções que modificam o estado

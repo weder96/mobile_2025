@@ -42,9 +42,9 @@ function TripDetailScreen({ route, navigation }) {
       />
       <View style={styles.listOuterContainer}>
         <View style={styles.listContainer}>
-          <Subtitle>Ingredients</Subtitle>
+          <Subtitle>Looks</Subtitle>
           <List data={selectedTrip.ingredients} />
-          <Subtitle>Steps</Subtitle>
+          <Subtitle>Tours</Subtitle>
           <List data={selectedTrip.steps} />
         </View>
       </View>

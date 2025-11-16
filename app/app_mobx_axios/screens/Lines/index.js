@@ -1,29 +1,23 @@
 import makeStyles from './styles'
 import React, { useEffect, useState } from 'react'
 
-import lineStore from '../../store/lines/LineStore'
 
 import { FlatList, Text, TextInput, View } from 'react-native'
 import RenderLine from './renderLine'
 
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { useTheme } from 'react-native-paper'
+import lineStore from '../../store/lines/LineStore'
 
-import useCounterStore from '../../store/zustand/LineStoreZustand'
+
+import { observer } from "mobx-react-lite";
+
+//import useCounterStore from '../../store/zustand/LineStoreZustand'
 
 
 function Lines({ ...props }) {
   const { colors } = useTheme()
-  const styles = makeStyles(colors)
-
-  const count = useCounterStore((state) => state.count);
-  const lines = useCounterStore((state) => state.lines);
-  const increment = useCounterStore((state) => state.increment);
-  const decrement = useCounterStore((state) => state.decrement);
-  const reset = useCounterStore((state) => state.reset);
-  const fetchLines = useCounterStore((state) => state.fetchLines);
-
-  
+  const styles = makeStyles(colors)  
   const [search, setSearch] = useState('')
   const [filtered, setFiltered] = useState(undefined)
 
@@ -45,10 +39,9 @@ function Lines({ ...props }) {
   }
 
   useEffect(() => {  
-      fetchLines()
-      console.log(lines) 
+      lineStore.getLines();      
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [fetchLines])
+  }, [])
 
   const Card = () => {
     return (
@@ -74,9 +67,9 @@ function Lines({ ...props }) {
         </View>
 
         <Text style={styles.line}>Linhas</Text>
-
+       
         <FlatList
-          data={filtered || lines}
+          data={filtered || lineStore.lines}
           renderItem={({ item }) => <RenderLine data={item} />}
           keyExtractor={(item) => item.id}
         />
@@ -85,4 +78,4 @@ function Lines({ ...props }) {
   )
 }
 
-export default Lines
+export default observer(Lines)
